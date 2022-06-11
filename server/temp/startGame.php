@@ -60,6 +60,8 @@
                 $randomNumber = 1;
             }
 
+            $randomNumber = number_format((float)$randomNumber, 2, '.', ''); // Round to 2 decimal places
+
             $sql    = "INSERT INTO crashgame (result) VALUES(?)";
             $stmt = mysqli_stmt_init($con);
             mysqli_stmt_prepare($stmt,$sql);
